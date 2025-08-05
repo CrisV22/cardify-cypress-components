@@ -1,24 +1,6 @@
 import React from 'react'
 import AddCard from './AddCard'
 
-Cypress.Commands.add('alertErrorHaveText', (expectedText) => {
-  cy.contains('.alert-error', expectedText)
-    .should('be.visible')
-})
-
-Cypress.Commands.add('fillCardForm', (card) => {
-  cy.get('[data-cy="number"]').type(card.number)
-  cy.get('[data-cy="holderName"]').type(card.holderName)
-  cy.get('[data-cy="expirationDate"]').type(card.expirationDate)
-  cy.get('[data-cy="cvv"]').type(card.cvv)
-  // Implementado data-cy dinâmico com: data-cy={`bank-${bank.value}`}
-  cy.get(`[data-cy="bank-${card.bank}"]`).click()
-})
-
-Cypress.Commands.add('submitCardForm', () => {
-  cy.get('[data-cy="save-my-card"').click()
-})
-
 describe('<AddCard />', () => {
   const myCard = {
     number: '4242424242424242',
@@ -86,7 +68,7 @@ describe('<AddCard />', () => {
     // Criado CSS com base em comportamento com .notice-sucess
     cy.get('.notice-message')
       .should('be.visible')
-      .and('have.text', 'Cartão cadastrado com sucesso!')
+      .and('have.text', 'Cartão cadastrado com suceÇo!')
   })
 
   it('Valida nome do titular com menos de 2 caracteres', () => {
