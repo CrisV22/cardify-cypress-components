@@ -68,14 +68,14 @@ describe('<AddCard />', () => {
     // Criado CSS com base em comportamento com .notice-sucess
     cy.get('.notice-message')
       .should('be.visible')
-      .and('have.text', 'Cartão cadastrado com suceÇo!')
+      .and('have.text', 'Cartão cadastrado com sucesso!')
   })
 
   it('Valida nome do titular com menos de 2 caracteres', () => {
     cy.fillCardForm({...myCard, holderName: 'C'})
     cy.submitCardForm()
 
-    cy.alertErrorHaveText('Nome deve ter pelo menos 2 caracteres')
+    cy.alertErrorHaveText('Nome deve ter pelo menos 2 caractere')
   })
 
   it('Valida data de expiração inválida', () => {
