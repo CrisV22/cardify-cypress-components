@@ -27,6 +27,7 @@
 Cypress.Commands.add('alertErrorHaveText', (expectedText) => {
   cy.contains('.alert-error', expectedText)
     .should('be.visible')
+    .and('have.text', expectedText)
 })
 
 Cypress.Commands.add('fillCardForm', (card) => {

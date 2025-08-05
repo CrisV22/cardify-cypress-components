@@ -1,8 +1,14 @@
-Estória:
-1. API's sem previsão de correção/liberação e o QA adianta o trabalho garantindo que pelo o menos o FE esteja funcional.
+# Preview 🎬
+![Preview](./docs/preview.gif)
 
+## Benefícios para a empresa 💼
 
+🌐 Continua testando mesmo com APIs fora do ar  
+⚛️ Garante que o Front-end está funcionando  
+⚡ Feedback rápidos e maior cobertura  
 
-Observações
-Testes de componente ficam juntos do código de desenvolvimento.
+## Competências adquiridas 🚀
 
+✅ Cypress Component Testing  
+✅ Spread syntax  
+✅ Data-driven testing  

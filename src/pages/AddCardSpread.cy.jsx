@@ -75,7 +75,7 @@ describe('<AddCard />', () => {
     cy.fillCardForm({...myCard, holderName: 'C'})
     cy.submitCardForm()
 
-    cy.alertErrorHaveText('Nome deve ter pelo menos 2 caractere')
+    cy.alertErrorHaveText('Nome deve ter pelo menos 2 caracteres')
   })
 
   it('Valida data de expiração inválida', () => {
